@@ -59,11 +59,11 @@ int main(int argc, char** argv)
         pos = wb_supervisor_field_get_sf_vec3f(trans_field);
         
         if (pos[0] > -0.65 && pos[0] < -0.3 && pos[2] > -0.65 && pos[2] < -0.3){
-          printf("movel");
           ac_direito = 1;
           ac_esquerdo = 1;
 
           if (sensores_prox[0] > 500 || sensores_prox[1] > 500 || sensores_prox[6] > 500 || sensores_prox[7] > 500){
+            printf("caixa leve detectada.");
             for(i = 0; i < 3; i++){
                 wb_robot_step(400);
             }
